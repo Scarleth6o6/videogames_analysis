@@ -1,6 +1,6 @@
 # Video Games Market Analysis
 
-An end-to-end data analysis project exploring trends and patterns in the global video games market (1980-2019).
+An end-to-end data analysis project exploring trends and patterns in the global video games market (1980-2016).
 
 ## 🎯 Insights Discovered
 
