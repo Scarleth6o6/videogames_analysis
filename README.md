@@ -1,43 +1,58 @@
-# Video Game Sales Analysis
+# Video Games Market Analysis
 
-## Project Description
-This project analyzes historical video game sales data to identify trends, patterns and insights about the gaming industry. The dataset contains information about games released from 1980 to 2016, including sales by region, platform, genre, and ratings.
+An end-to-end data analysis project exploring trends and patterns in the global video games market (1980-2019).
 
-## Key Features
-- Data cleaning and preprocessing
-- Exploratory data analysis (EDA)
-- Time series analysis of game releases
-- Platform performance comparison
-- Genre and regional sales analysis
-- Visualization of trends
+## 🎯 Insights Discovered
 
-## Technologies Used
-- Python 3
-- Pandas
-- Matplotlib/Seaborn
-- Jupyter Notebook
+- **Sales Peak**: Video game sales reached their peak around 2008-2010
+- **Genre Dominance**: Action and Sports genres lead global sales
+- **Regional Preferences**: Japan shows distinct genre preferences compared to other regions
+- **Critic-User Correlation**: Moderate correlation between critic scores and user ratings
 
-## Dataset
-The dataset contains 16,715 records with the following columns:
-- Name: Game title
-- Platform: Console/platform
-- Year_of_Release: Release year
-- Genre: Game genre
-- NA_sales: North America sales (in millions)
-- EU_sales: Europe sales (in millions)
-- JP_sales: Japan sales (in millions)
-- Other_sales: Other regions sales (in millions)
-- Critic_score: Critic review score (out of 100)
-- User_score: User review score (out of 10)
-- Rating: ESRB rating
+## 🛠️ Project Structure
+```videogames_analysis/
+├── data/
+│   └── games.csv
+├── notebooks/
+│   ├── 01_exploratory_analysis_original.ipynb
+│   └── 02_analysis_with_modules.ipynb
+├── src/
+│   ├── data_cleaning.py
+│   └── visualization.py
+└── README.md
+```
+## 🚀 Quick Start
 
-## Installation
-1. Clone this repository
-2. Install requirements: `pip install -r requirements.txt`
-3. Run Jupyter Notebook: `jupyter notebook`
+1. **Clone and setup**:
+   ```bash
+   git clone https://github.com/Scarleth6o6/videogames_analysis
+   cd videogames_analysis
 
-## Key Findings
-1. The video game industry experienced exponential growth from 1994 to 2009
-2. The PS2 was the best-selling platform historically
-3. Action and sports games are among the top-selling genres
-4. North America accounts for the largest share of game sales
+2. **Run analysis**:
+
+    ```python
+    # In your notebook
+    from src.data_cleaning import load_and_clean_data
+    from src.visualization import plot_essentials
+
+    df = load_and_clean_data('data/raw/video_games.csv')
+    fig = plot_essentials(df)
+
+## 💡 Technical Highlights
+- **Modular Design**: Separated data processing from analysis
+
+- **Data Quality**: Handled missing values, duplicates, and data type conversions
+
+- **Visual Storytelling**: Clear, labeled visualizations that communicate insights effectively
+
+## 📊 Key Features
+- Sales trend analysis across decades
+
+- Regional market comparisons
+
+- Genre performance analysis
+
+- Critic vs user score evaluation
+
+## 🌐 Language Note
+The initial exploratory analysis in `01_exploratory_analysis_original.ipynb` is documented in Spanish, showcasing the complete data exploration process. The code and subsequent analysis are language-agnostic.

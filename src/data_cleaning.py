@@ -36,8 +36,10 @@ def load_and_clean_data(filepath):
     games_df = games_df.drop_duplicates(subset=['name', 'platform', 'year_of_release'])
     
     # Cambia el tipo de dato a 'year_of_release'
-    games_df['year_of_release'] = games_df['year_of_release'].astype('int')
+    games_df['year_of_release'] = pd.to_numeric(games_df['year_of_release'])
     
     games_df['user_score']= pd.to_numeric(games_df['user_score'], errors='coerce')
+    # Suma las ventas totales de cada videojuego
+    games_df['global_sales'] = games_df['na_sales'] + games_df['eu_sales'] + games_df['jp_sales'] + games_df['other_sales']
         
     return games_df
